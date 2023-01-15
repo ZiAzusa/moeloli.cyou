@@ -194,9 +194,17 @@
         window.onload = function() {
             document.getElementById("loader").remove();
             var articles = document.querySelectorAll("article");
-            for (let i in articles) {
-                articles[i].style = "background-image:url(https://imgapi.nahida.fun/random?" + i + ")";
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', 'https://imgapi.nahida.fun/random?num=6');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    let data = JSON.parse(xhr.responseText);
+                    for (let i in articles) {
+                        articles[i].style = "background-image:url(" + data.pic[i] + ")";
+                    }
+                }
             }
+            xhr.send();
         }
    </script>
    <script>
