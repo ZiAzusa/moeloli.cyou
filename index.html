@@ -201,12 +201,12 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        window.onload = async function() {
+        window.onload = () => {
             document.getElementById("loader").remove();
             var articles = document.querySelectorAll("article");
             var xhr = new XMLHttpRequest();
             xhr.open('get', 'https://imgapi.nahida.fun/random?num=6');
-            xhr.onreadystatechange = function () {
+            xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
                     let data = JSON.parse(xhr.responseText);
                     for (let i in articles) {
@@ -214,11 +214,11 @@
                     }
                 }
             }
-            await xhr.send();
+            xhr.send();
         }
    </script>
    <script>
-        (function () {
+        (() => {
             var bp = document.createElement('script');
             var curProtocol = window.location.protocol.split(':')[0];
             if (curProtocol === 'https') {
