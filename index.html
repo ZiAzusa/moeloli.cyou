@@ -201,7 +201,7 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        window.onload = function() {
+        window.onload = async function() {
             document.getElementById("loader").remove();
             var articles = document.querySelectorAll("article");
             var xhr = new XMLHttpRequest();
@@ -214,7 +214,7 @@
                     }
                 }
             }
-            xhr.send();
+            await xhr.send();
         }
    </script>
    <script>
