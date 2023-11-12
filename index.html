@@ -92,7 +92,7 @@
                 <article>
                     <span class="image"><img src="" alt="" /></span>
                     <header class="major">
-                        <h3><a target="_blank" href="https://imgapi.nahida.xin/help" class="link">Nahida.♡二次元随机图</a></h3>
+                        <h3><a target="_blank" href="https://imgapi.lie.moe/help" class="link">萌える嘘二次元随机图</a></h3>
                         <ul class="text">
                             <li><p>高清精品壁纸，图片总数2万+，总大小60G+</p></li>
                             <li><p>基于Cloudflare CDN缓存搭建，超稳！</p></li>
@@ -187,7 +187,7 @@
                     <li>&copy; 2018-2023: <a target="_blank" href="https://about.lie.moe">梓漪</a></li>
                     <li>Design: <a target="_blank" href="https://html5up.net">HTML5 UP</a></li>
                     <li>Banner: <a target="_blank" href="https://pixiv.net/i/85905922">[PID]85905922</a></li>
-                    <li>Random Background: <a target="_blank" href="https://imgapi.nahida.xin/help">Nahida.♡</a></li>
+                    <li>Random Background: <a target="_blank" href="https://imgapi.lie.moe/help">ImgAPI.Lie.Moe</a></li>
                 </ul>
             </div>
         </footer>
@@ -205,7 +205,7 @@
             document.getElementById("loader").remove();
             var articles = document.querySelectorAll("article");
             var xhr = new XMLHttpRequest();
-            xhr.open('get', 'https://imgapi.nahida.xin/random?num=6');
+            xhr.open('get', 'https://imgapi.lie.moe/random?num=6');
             xhr.onreadystatechange = () => {
                 if (xhr.readyState === 4) {
                     let data = JSON.parse(xhr.responseText);
